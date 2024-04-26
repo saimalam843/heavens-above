@@ -20,6 +20,7 @@ function getTable(config) {
 	} else {
 		options = utils.post_options("IridiumFlares.aspx?", opt);
 	}
+	let options = utils.get_options("IridiumFlares.aspx?");
 	request(options, (error, response, body) => {
 		if (error || response.statusCode !== 200) return;
 		const $ = cheerio.load(body, {
