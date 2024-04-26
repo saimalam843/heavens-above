@@ -6,7 +6,7 @@
   "main": "run.js",
   "scripts": {
     "start": "node run.js",
-    "build": "'npm run build'",
+    "build": "node run.js",
     "test": "jest",
     "lint": "eslint ."
   },
