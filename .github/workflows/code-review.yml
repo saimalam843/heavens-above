@@ -12,33 +12,33 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Set up Node.js
+ 
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '16'
 
-      # Install dependencies (if needed)
+
       - name: Install dependencies
         run: npm install
 
-      # Run linting and code analysis
+
       - name: Run linting and code analysis
         # run: npm run lint
         run: echo "Running linting"
 
-      # Run tests
+
       - name: Run tests
         run: npm test
 
-      # Analyze code quality metrics
+
       - name: Analyze code quality metrics
         run: npm run analyze
 
-      # Scan for security vulnerabilities
+
       - name: Scan for security vulnerabilities
         run: npm audit
 
-      # Send code review feedback
+
       - name: Send code review feedback
         run: ./scripts/code_review_feedback.sh
