@@ -11,4 +11,4 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Run maintenance script
-      run: node scripts/maintenance.js
+      run: ./scripts/maintenance.sh
