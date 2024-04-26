@@ -11,7 +11,7 @@ function generateReleaseNotes() {
     
     // Write commit messages to a release notes file
     fs.writeFileSync('RELEASE_NOTES.md', '## Release Notes\n\n');
-    commitMessages.forEach((message, index) => {
+    commitMessages.forEach(message => {
         fs.appendFileSync('RELEASE_NOTES.md', `- ${message}\n`);
     });
 
